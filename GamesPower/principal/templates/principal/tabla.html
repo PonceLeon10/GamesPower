@@ -1,0 +1,57 @@
+{% extends 'principal/plantilla.html' %}
+
+{% block titulo %}
+Tabla de comunidad
+{% endblock %}
+
+{% block contenido %}
+<div id="about" class="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="titlepage">
+                    <h2>Tabla de comentarios</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="about-box">
+                    <h3>Tabla de los comentarios de la comunidad</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Producto</th>
+                <th>Mensaje</th>
+                <th>Editar</th>
+                <th>Eliminar</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for comu in comunidad %}
+
+            <tr>
+                <td>{{comu.nombre}}</td>
+                <td>{{comu.producto}}</td>
+                <td>{{comu.mensaje}}</td>
+                <td><a href="{% url 'Consulta' comu.id %}">Modificar</a></td>
+                <td><a href="{% url 'Eliminar' comu.id %}">Borrar</a></td>
+            </tr>
+
+            {% endfor %}
+        </tbody>
+    </table>
+
+
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,65 @@
+{% extends 'principal/plantilla.html' %}
+
+{%block titulo%}
+Comunidad
+{%endblock%}
+
+
+{% block contenido %}
+
+<div id="about" class="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="titlepage">
+                    <h2>Foro de comunidad</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="about-box">
+                    <h3> Comenta sobre los productos que ofrece nuestra página</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="contact" class="contact">
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-12">
+
+                <form class="contact_bg" action={% url 'Comunidad' %} method='POST'>
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                            <h2 class="text-white">Nombre de usuario</h2>
+                            <input class="contactus" placeholder="Usuario" type="text" name="nombre" autocomplete="off">
+                        </div>
+
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                            <h2 class="text-white">Producto</h2>
+                            <input class="contactus" placeholder="Nombre del Producto" type="text" name="producto" autocomplete="off">
+                        </div>
+
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                            <h2 class="text-white">Comentario</h2>
+                            <textarea class="textarea" placeholder="Comentario del producto" type="text" name="mensaje"></textarea>
+                        </div>
+
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 text-center">
+                            <input type="submit"  value="Comentar" class="btn btn-primary text-white"></input>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}

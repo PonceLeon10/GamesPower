@@ -1,0 +1,105 @@
+{% extends 'principal/plantilla.html' %}
+{% block titulo %}
+GamesPower
+{% endblock %}
+{% block contenido %}
+<!-- our -->
+
+<div id="about" class="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="titlepage">
+                    <h2>A cerca de GamesPower</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="about-box">
+                    <h3> GamesPower es la pagina que cualquier gamer necesita!!!!!
+                        <br> Descubre nuestra gran variedad de productos y accesorios que puedes adquirir para ampliar tu set gamer.</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="games" class="our">
+    <div class="container">        
+        <div class="row">
+            <div class="col-md-12">
+                <div class="titlepage">
+                    <h2>Contamos con</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 margin_bottom">
+                <div class="row">
+<!-- contenido 1-->
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                        <div class="two-box">
+                            <figure><img src="/static/principal/images/games.jpg" alt="400" width="360" /></figure>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
+
+                        <div class="Games">
+                            <h3>Productos</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et </p>
+                            <a href="{% url 'Productos' %}">Ir a los productos</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 margin_bottom">
+                <div class="row">
+<!-- contenido 2 -->
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                        <div class="two-box">
+                            <figure><img src="/static/principal/images/proveedores.jpg" alt="400" width="360" /></figure>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
+
+                        <div class="Games">
+                            <h3>Proveedores</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et </p>
+                            <a href="{% url 'Proveedores' %}">Contactanos</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="row">
+<!-- contenido 3 -->
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                        <div class="two-box">
+                            <figure><img src="/static/principal/images/comunidad.jpg" alt="400" width="360" /></figure>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
+
+                        <div class="Games">
+                            <h3>Comunidad</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et </p>
+                            <a href="{% url 'Comunidad' %}">Comunidad</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- end our -->
+<!-- We are -->
+
+<!-- end We are -->
+
+{% endblock %}

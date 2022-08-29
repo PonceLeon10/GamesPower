@@ -1,0 +1,49 @@
+{% extends 'principal/plantilla.html' %}
+{%block titulo%}
+Productos
+{%endblock%}
+{% block contenido %}
+
+<div id="about" class="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="titlepage">
+                    <h2>Catalogo de productos</h2>
+                </div>
+            </div>
+        </div>
+        <!-- carts -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="about-box">
+                    <h3> Lista de productos con los que contamos por el momento </h3>
+                </div>
+            </div>
+        </div><br>
+
+        <div class="container">
+          <div class="row">
+            {% for pro in productos %}
+            <div class="col-3 pb-5 ">
+              <div class="card padding"><br>
+                <div class="card-header text-center">
+                  <h4 class="card-title">Producto: {{pro.nombre}}</h4>
+                </div>
+                <div class="icon-box text-center">
+                  <img class="card-img-top" src="{{pro.imagen.url}}"  width="200" height="200"><br><hr>
+                </div>
+                <div class="icon-text">
+                  <p class="card-text font-weight-italic">Categoria: {{pro.categoria}}</p>
+                  <p class="card-text font-weight-italic">Existencia: {{pro.existencia}}</p>
+                  <p class="card-text font-weight-italic">Descripcion: {{pro.descripcion}} </p>
+                </div>
+              </div>
+            </div><br>
+            {% endfor %}
+          </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
